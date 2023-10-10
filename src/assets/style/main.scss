@@ -1,0 +1,108 @@
+@import './_variables.scss';
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $primary-color;
+}
+
+
+.page-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 1370px;
+  margin: auto;
+}
+
+header {
+  background: $background-color;
+  height: 100px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  z-index:10;
+
+  .brand-container {
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .logo {
+    width: 64px;
+  }
+
+  .title {
+    color: $text-color;
+    margin-left: 20px;
+    font-size: 24px;
+  }
+}
+
+.home-view {
+  width: 100%;
+  tbody tr td {
+    text-align: left;
+  }
+}
+
+.edit-link {
+  text-decoration: none;
+  color: $text-color;
+  display: flex;
+  width: 100%;
+  button {
+    text-transform: capitalize;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+
+.edit-view form {
+  background: $background-color;
+  padding: 25px;
+  color: $text-color;
+
+  .v-field__field {
+    background: $form-background-color;
+    color: $form-text-color;
+  }
+
+  .v-text-field__suffix__text {
+    color: $form-text-color;
+  }
+
+  .v-input--disabled {
+    cursor: not-allowed;
+    pointer-events: unset !important;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .edit-view {
+    margin-top: 150px;
+  }
+}
